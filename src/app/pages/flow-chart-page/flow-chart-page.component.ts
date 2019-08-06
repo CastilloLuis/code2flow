@@ -12,13 +12,14 @@ export class FlowChartPageComponent implements OnInit {
 
   loggedUser: User = undefined;
   private allowedCharts: number = undefined;
+  private loaded: boolean = false;
 
   constructor(private httpService: UserService) { }
 
   ngOnInit() {
     this.loggedUser = this.httpService.getUser();
     this.allowedCharts = this.loggedUser.premium ? 8 : 3;
-    console.log('Logged User', this.loggedUser);
+    setTimeout(() => this.loaded = true, 1000);
   }
 
 }

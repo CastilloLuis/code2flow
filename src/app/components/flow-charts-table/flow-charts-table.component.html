@@ -9,7 +9,16 @@
     </thead>
     <tbody>
         <tr *ngFor="let flowChart of user.flowCharts">
-            <td><img src="../../../assets/{{flowChart.icon}}" style="width: 45px;" alt="FlowChart Icon"></td>
+            <td>
+                
+                <div class="image-container">
+                    <img src="../../../assets/{{flowChart.icon}}" alt="FlowChart Icon"/>
+                    <div *ngIf="!flowChart.active" class="after">
+                        <clr-icon shape="lock" style="height: 25px; width: 25px;"></clr-icon>
+                    </div>
+                </div>                
+                
+            </td>
             <td style="text-align: left;">
                 <div id="flowchart-description">
                     <div style="flex-direction: column; padding-top: 14px;">
