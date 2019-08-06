@@ -1,0 +1,12 @@
+<div style="padding: 20px;">
+  <div id="flowChart-page">
+    <span style="font-size: 25px; color: #333333">My flowcharts</span>
+    <div style="display: flex; flex-direction: column; align-items: flex-end">
+      <span style="color: #6b60f1; font-size: 15px">Upgrade Plan</span>
+      <span style="font-size: 15px">Flowcharts: <span style="color: red; font-weight: 500">{{loggedUser.flowCharts.length}}/{{allowedCharts}}</span></span>
+    </div>
+  </div>
+  <app-flow-charts-table
+    [user]="loggedUser"
+  ></app-flow-charts-table>
+</div>

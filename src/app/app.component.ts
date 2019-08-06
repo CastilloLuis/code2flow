@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'code2flow';
+  alertText: string = 'Youve reached limit of 3 flowcharts on the Free Plan'
 }

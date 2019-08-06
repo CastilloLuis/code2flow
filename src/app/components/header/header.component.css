@@ -1,0 +1,9 @@
+.header-design {
+    min-width: 12rem;
+    background: #192339;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem
+}

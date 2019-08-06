@@ -1,0 +1,29 @@
+.sideBar-item {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    color: #1e283e;
+    font-size: 16px;
+}
+
+#add-team-wrapper {
+    width: 100%;
+    display: flex;
+    padding-left: 22px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#add-team-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #49a561;
+    color: white;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}

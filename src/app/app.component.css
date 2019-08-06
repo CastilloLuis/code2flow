@@ -3,3 +3,19 @@
     background-color: #dfdff6;
     text-decoration: none;
 }
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.size15 {
+    font-size: 15px;
+}
+
+.size25 {
+    font-size: 25px
+}

@@ -1,0 +1,11 @@
+.alertClass {
+    background: #cc3d30; 
+    height: 45px; 
+    align-items: center
+}
+
+.upgrade-button {
+    font-weight: bold; 
+    padding-bottom: 5px; 
+    border-bottom: 1px solid white;
+}

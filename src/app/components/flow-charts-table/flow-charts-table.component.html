@@ -1,0 +1,50 @@
+<table class="table" *ngIf="user">
+    <thead>
+        <tr>
+            <th class="th1"></th>
+            <th class="th2">Flowchart</th>
+            <th class="th3">Share with</th>
+            <th class="th4">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flowChart of user.flowCharts">
+            <td><img src="../../../assets/{{flowChart.icon}}" style="width: 45px;" alt="FlowChart Icon"></td>
+            <td style="text-align: left;">
+                <div id="flowchart-description">
+                    <div style="flex-direction: column; padding-top: 14px;">
+                        <span *ngIf="flowChart.active" style="font-size: 17px; color: #333333">{{flowChart.title}}</span>
+                        <span *ngIf="!flowChart.active" style="font-size: 17px; color: #d14148">{{flowChart.title}}</span>
+                        <br/>
+                        <span>{{flowChart.date}}</span>
+                    </div>
+                    <div *ngIf="!flowChart.active">
+                        <button class="btn btn-danger" style="background: #e84740; outline: none;">UPGRADE TO UNLOCK</button>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div style="display: flex; justify-content: flex-start; align-items: center; padding-top: 7px;">
+                    <img *ngFor="let user of flowChart.sharedWith" src="../../../assets/{{user}}" style="width: 30px; border-radius: 50%;margin: 5px;" alt="Shared User in code2flow">
+                </div>
+            </td>
+            <td style="text-align: right; cursor: pointer;"><clr-icon shape="ellipsis-vertical" style="margin-top: 14px"></clr-icon></td>
+        </tr>
+        <tr>
+            <td>
+                <div id="circle-add-flowchart-wrapper">
+                    <div style="width: 40px">
+                    <button type="button" id="circle-add-flowchart">
+                        <clr-icon shape="plus"></clr-icon>
+                    </button>
+                    </div>
+                </div>                    
+            </td>            
+            <td style="text-align: left; padding-top: 22px">
+                <span style="color: #8b7eff; font-size: 19px; cursor: pointer;">Create new team</span>                
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

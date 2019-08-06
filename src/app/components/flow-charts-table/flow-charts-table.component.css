@@ -1,0 +1,52 @@
+.th1 {
+    width: 60px;
+    border-right: 1px solid #ececec;
+}
+
+.th2 {
+    width: 700px;
+    color: #57687b;
+    text-align: left;
+    border-right: 1px solid #ececec;
+}
+
+.th3 {
+    color: #57687b;
+    text-align: left;
+    border-right: 1px solid #ececec;
+}
+
+.th4 {
+    color: #57687b;
+    text-align: left;
+}
+
+#flowchart-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#circle-add-flowchart-wrapper {
+    width: 100%;
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#circle-add-flowchart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8b7eff;
+    color: white;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
