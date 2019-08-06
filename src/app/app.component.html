@@ -1,15 +1,74 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="main-container">
+    <div class="alert alert-app-level alert-danger" style="background: #cc3d30; height: 45px; align-items: center" role="alert">
+        <div class="alert-items">
+            <div class="alert-item static" style="font-size: 15px;">
+                <div class="alert-icon-wrapper">
+                    <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                </div>
+                <div class="alert-text">
+                    You've reached limit of 3 flowcharts on the Free Plan.
+                </div>
+                <div class="alert-actions" style="cursor: pointer;">
+                    <span style="font-weight: bold; padding-bottom: 5px; border-bottom: 1px solid white;">Upgrade now</span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="close" aria-label="Close">
+            <clr-icon aria-hidden="true" shape="close"></clr-icon>
+        </button>
+    </div>
+    <header class="header" style="background: #0d172b; display: flex; align-items: center; justify-content: center">
+      <div style="min-width: 12rem; background: #192339; color: white; padding: 20px; display: flex; align-items: center; height: 2.5rem">
+        <div>
+          <img 
+            src="../assets/guy.jpg" 
+            alt="Luis Castillo Profile Picture"
+            style="border-radius: 50%; width: 30px;">
+        </div>
+        <div style="width: 15px"></div>
+        <div>
+          <span style="font-weight: bold; color: white">Luis Castillo</span>
+        </div>
+        <div style="width: 10px"></div>
+        <div style="cursor: pointer;">
+          <clr-icon shape="angle" style="color: #b8c2cd; transform: rotate(-180deg)"></clr-icon>
+        </div>
+      </div>          
+      <div class="logo" style="width: 100%;display: flex;justify-content: center;align-items: center;">
+        <img src="../assets/logo.svg" alt="code2flow.com logo" style="width: 120px">
+      </div>
+      <div class="create-flowchar">
+        <button class="btn btn-success" style="background: #49a561; outline: none;">NEW FLOWCHART</button>
+      </div>
+    </header>    
+    <div class="content-container">
+        <clr-vertical-nav style="width: 12rem; padding-top: 0px;background: #ffffff;border-right: 1.5px solid #dfdff6;">
+            <div style="padding-top: 14px">
+              <a style="height: 45px; display: flex; align-items: center; color: #1e283e; font-size: 16px;" clrVerticalNavLink routerLink="./charmander" routerLinkActive="active">
+                <clr-icon shape="cloud-chart" style="width: 25px; height: 25px; margin-right: 15px"></clr-icon>My flowcharts
+              </a>
+              <a style="height: 45px; display: flex; align-items: center; color: #1e283e; font-size: 16px;" clrVerticalNavLink routerLink="./jigglypuff" routerLinkActive="active">
+                <clr-icon shape="clock" style="width: 25px; height: 25px; margin-right: 15px"></clr-icon>Recent
+              </a>
+              <a style="height: 45px; display: flex; align-items: center; color: #1e283e; font-size: 16px;" clrVerticalNavLink routerLink="./pikachu" routerLinkActive="active">
+                <clr-icon shape="users" style="width: 25px; height: 25px; margin-right: 15px"></clr-icon>Shared with me
+              </a>
+              <a style="height: 45px; display: flex; align-items: center; color: #1e283e; font-size: 16px;" clrVerticalNavLink routerLink="./raichu" routerLinkActive="active">
+                <clr-icon shape="trash" style="width: 25px; height: 25px; margin-right: 15px"></clr-icon>Trash
+              </a>
+              <div class="nav-divider" style="border: 0.5px solid #565656"></div>
+              <div style="width: 100%; display: flex; padding-left: 22px; align-items: center; justify-content: flex-start;">
+                <div style="width: 40px">
+                  <button type="button" style="display: flex;align-items: center;justify-content: center;background: #49a561;color: white;width: 30px;height: 30px;outline: none;border: none;border-radius: 50%;cursor: pointer;">
+                    <clr-icon shape="plus"></clr-icon>
+                  </button>
+                </div>
+                <span style="color: #1e283e; font-size: 16px;">Create new team</span>
+              </div>
+            </div>
+        </clr-vertical-nav>
+        <div style="width: 100%;">     
+          <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<button class="btn btn-primary">Primary</button>
-<button class="btn btn-success">Success</button>
-<button class="btn btn-warning">Warning</button>
-<button class="btn btn-danger">Danger</button>
-<button class="btn btn-danger" disabled>Disabled</button>
-
-<router-outlet></router-outlet>
