@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'code2flow';
-  alertText: string = 'Youve reached limit of 3 flowcharts on the Free Plan'
+  private alertText: string = 'Youve reached limit of 3 flowcharts on the Free Plan'
 }

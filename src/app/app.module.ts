@@ -13,7 +13,7 @@ import { AlertComponent } from './components/alert/alert.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FlowChartPageComponent } from './pages/flow-chart-page/flow-chart-page.component';
 
-// we define the routes of the app
+// App routes.
 const appRoutes: Routes = [
   {path: '', component: FlowChartPageComponent},
 ];

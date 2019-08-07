@@ -8,6 +8,10 @@ import { User } from 'src/app/interfaces/user';
 })
 export class FlowChartsTableComponent implements OnInit {
 
+
+  /**
+   * Object that represent the mock data of the "logged" user.
+  */
   @Input() user: User = undefined;
 
   constructor() { }

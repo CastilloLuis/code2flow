@@ -10,8 +10,22 @@ import { User } from 'src/app/interfaces/user';
 })
 export class FlowChartPageComponent implements OnInit {
 
+
+  /**
+   * Object that represents the user "logged"
+  */
   loggedUser: User = undefined;
+
+
+  /**
+   * Quantity of allowedCharts depending if its premium or not.
+  */
   private allowedCharts: number = undefined;
+
+
+  /**
+   * Variable to handle the "fetch" simulation.
+  */  
   private loaded: boolean = false;
 
   constructor(private httpService: UserService) { }
